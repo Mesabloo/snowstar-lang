@@ -1,0 +1,74 @@
+@font-face {
+    font-family: NotoMono;
+    src: url("../fonts/NotoMono-Regular.ttf");
+}
+
+:root {
+    --header-height: 50px;
+    --header-bg-color: #26c5ff;
+    --header-fg-color: #121212;
+    --header-font-size: 25px;
+}
+
+html, body {
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: var(--header-bg-color);
+    width: 100vw;
+    height: var(--header-height);
+    position: fixed;
+    left: 0; right: 0; top: 0; bottom: 0;
+}
+
+header .home {
+    height: calc(var(--header-height) - 6px);
+    width: var(--header-height);
+    position: fixed;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+header .home div {
+    width: 30px;
+    height: 5px;
+    background-color: var(--header-fg-color);
+    border-radius: 5px;
+    margin: 6px 0;
+}
+
+header .spacer {
+    height: calc(var(--header-height) - 10px);
+    width: 1px;
+    background-color: var(--header-fg-color);
+    position: absolute;
+    left: calc(var(--header-height) + 2px);
+    top: 5px;
+    border-radius: 15px;
+}
+
+header b {
+    background-color: var(--header-bg-color);
+    color: var(--header-fg-color);
+    position: absolute;
+    height: calc(var(--header-height) - 10px);
+    left: calc(var(--header-height) + 15px);
+    top: 10px;
+    font-size: var(--header-font-size);
+    font-family: "NotoMono";
+    cursor: default;
+
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */
+}
+
+body .panel {
+    display: none;
+}
