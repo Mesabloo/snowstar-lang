@@ -5,9 +5,13 @@
 
 :root {
     --header-height: 50px;
-    --header-bg-color: #26c5ff;
-    --header-fg-color: #121212;
+    --header-bg-color: #262524;
+    --header-fg-color: #EFEFEF;
     --header-font-size: 25px;
+
+    --panel-width: 300px;
+    --panel-bg-color: #282929;
+    --panel-bg-color-hover: #464747;
 }
 
 html, body {
@@ -16,6 +20,11 @@ html, body {
     height: 100vh;
     margin: 0;
     overflow-x: hidden;
+
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */
 }
 
 header {
@@ -62,13 +71,40 @@ header b {
     font-size: var(--header-font-size);
     font-family: "NotoMono";
     cursor: default;
-
-    -webkit-user-select: none;  /* Chrome all / Safari all */
-    -moz-user-select: none;     /* Firefox all */
-    -ms-user-select: none;      /* IE 10+ */
-    user-select: none;          /* Likely future */
 }
 
 body .panel {
-    display: none;
+    position: absolute;
+    top: var(--header-height);
+    left: -100%;
+    width: var(--panel-width);
+    height: calc(100% - var(--header-height));
+    background-color: var(--panel-bg-color);
+    color: var(--header-fg-color);
+
+    -webkit-transition: left 0.4s ease-in-out;
+    -moz-transition: left 0.4s ease-in-out;
+    -o-transition: left 0.4s ease-in-out;
+    transition: left 0.4s ease-in-out;
+}
+
+body .panel .spacer {
+    height: 10px;
+    width: var(--panel-width);
+}
+
+body .panel ul {
+    list-style-type: none;
+    font-size: 18px;
+}
+
+body .panel ul li {
+    padding: 10px;
+    margin-left: 3px;
+}
+
+body .panel ul li:hover[class="item"] {
+    background-color: var(--panel-bg-color-hover);
+    border-left: 3px solid var(--header-fg-color);
+    padding: 10px;
 }

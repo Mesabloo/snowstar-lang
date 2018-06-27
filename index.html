@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta charset="utf-8"/>
-    <title>Snow* Language</title>
+    <title>The Snow* Language</title>
     <link rel="stylesheet" href="stylesheets/main.css"/>
   </head>
 
@@ -20,15 +20,21 @@
       </b>
     </header>
     <span class="panel">
+      <div class="spacer"></div>
       <ul>
-        <li class="item">Home</li>
-        <li classs="item">Reference</li>
+        <li class="item home">Home</li>
+        <li class="item ref">Reference</li>
         <li class="divider"></li>
-        <li class="item">About</li>
+        <li class="item about">About</li>
       </ul>
     </span>
   </body>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="scripts/main.js">
+    $('body').on('load', () => {
+      $('.panel').css('display', 'none')
+    })
+  </script>
 
 </html>
