@@ -103,7 +103,7 @@ body .panel ul li {
     margin-left: 3px;
 }
 
-body .panel ul li:hover[class="item"] {
+body .panel ul li[class="item"]:hover {
     background-color: var(--panel-bg-color-hover);
     border-left: 3px solid var(--header-fg-color);
     padding: 10px;
