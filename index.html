@@ -3,38 +3,29 @@
     <meta charset="utf-8"/>
     <title>The Snow* Language</title>
     <link rel="stylesheet" href="stylesheets/main.css"/>
+    <link rel="stylesheet" href="stylesheets/animation.css"/>
   </head>
 
   <body>
-    <header>
-      <span class="home">
-        <center>
-          <div></div>
-          <div></div>
-          <div></div> 
-        </center>
-      </span>
-      <span class="spacer"></span>
-      <b>
-        Snow* Language
-      </b>
-    </header>
-    <span class="panel">
+    <div class="spacer_top"></div>
+    <div class="spacer_left container">
+      <div class="title">
+        <b>Snow*</b>
+      </div>
+      <div class="subtitle">
+        A language you will never learn at school
+      </div>
       <div class="spacer"></div>
       <ul>
-        <li class="item home">Home</li>
-        <li class="item ref">Reference</li>
-        <li class="divider"></li>
-        <li class="item about">About</li>
+        <div class="item about"><b>About</b></div>
+        <div class="item tuto"><b>Tutorial</b></div>
+        <div class="item ref"><b>Reference</b></div>
+        <div class="item bins"><b>Binaries</b></div>
       </ul>
-    </span>
+    </div>
   </body>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="scripts/main.js">
-    $('body').on('load', () => {
-      $('.panel').css('display', 'none')
-    })
-  </script>
+  <script src="scripts/main.js"></script>
 
 </html>

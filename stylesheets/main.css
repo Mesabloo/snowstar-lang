@@ -1,17 +1,19 @@
 @font-face {
-    font-family: NotoMono;
-    src: url("../fonts/NotoMono-Regular.ttf");
+    font-family: Decterm;
+    src: url("../fonts/_decterm.ttf");
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 :root {
-    --header-height: 50px;
-    --header-bg-color: #262524;
-    --header-fg-color: #EFEFEF;
-    --header-font-size: 25px;
-
-    --panel-width: 300px;
-    --panel-bg-color: #282929;
-    --panel-bg-color-hover: #464747;
+    --bg-color: radial-gradient(circle, rgba(30,53,73,1) 0%, rgba(25,25,25,1) 100%);
 }
 
 html, body {
@@ -25,86 +27,62 @@ html, body {
     -moz-user-select: none;     /* Firefox all */
     -ms-user-select: none;      /* IE 10+ */
     user-select: none;          /* Likely future */
+
+    background: var(--bg-color) fixed;
+
+    font-family: Decterm;
+    color: #EFEFEF;
 }
 
-header {
-    background-color: var(--header-bg-color);
-    width: 100vw;
-    height: var(--header-height);
-    position: fixed;
-    left: 0; right: 0; top: 0; bottom: 0;
+body {
+    opacity: 0;
+    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 }
 
-header .home {
-    height: calc(var(--header-height) - 6px);
-    width: var(--header-height);
-    position: fixed;
-    margin-top: 5px;
-    cursor: pointer;
+body .spacer_top {
+    width: inherit;
+    height: 25%;
 }
 
-header .home div {
-    width: 30px;
-    height: 5px;
-    background-color: var(--header-fg-color);
-    border-radius: 5px;
-    margin: 6px 0;
+body .spacer_left {
+    margin-left: 10%;
+    width: 90%;
+    height: 75%;
 }
 
-header .spacer {
-    height: calc(var(--header-height) - 10px);
-    width: 1px;
-    background-color: var(--header-fg-color);
-    position: absolute;
-    left: calc(var(--header-height) + 2px);
-    top: 5px;
-    border-radius: 15px;
+body .container .spacer {
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
 }
 
-header b {
-    background-color: var(--header-bg-color);
-    color: var(--header-fg-color);
-    position: absolute;
-    height: calc(var(--header-height) - 10px);
-    left: calc(var(--header-height) + 15px);
-    top: 10px;
-    font-size: var(--header-font-size);
-    font-family: "NotoMono";
-    cursor: default;
+body .container {
+    line-height: 0.9;
 }
 
-body .panel {
-    position: absolute;
-    top: var(--header-height);
-    left: -100%;
-    width: var(--panel-width);
-    height: calc(100% - var(--header-height));
-    background-color: var(--panel-bg-color);
-    color: var(--header-fg-color);
-
-    -webkit-transition: left 0.4s ease-in-out;
-    -moz-transition: left 0.4s ease-in-out;
-    -o-transition: left 0.4s ease-in-out;
-    transition: left 0.4s ease-in-out;
+body .container .title {
+    font-size: 60px;
 }
 
-body .panel .spacer {
-    height: 10px;
-    width: var(--panel-width);
+body .container .subtitle {
+    font-size: 20px;
 }
 
-body .panel ul {
-    list-style-type: none;
-    font-size: 18px;
+body .container ul {
+    line-height: 1.1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-body .panel ul li {
-    padding: 10px;
-    margin-left: 3px;
+body .container ul .item {
+    font-size: 50px;
+    color: #aaaaaa;
 }
 
-body .panel ul li[class="item"]:hover {
-    background-color: var(--panel-bg-color-hover);
-    border-left: 3px solid var(--header-fg-color);
-    padding: 10px;
+body .container ul .item:hover {
+    color: rgb(255, 224, 85);
 }
