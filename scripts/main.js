@@ -5,7 +5,7 @@ $('body .container ul .item').click((e) => {
     }, 500)
 })
 
-$(window).on('beforeunload', () => {
+$(window).on('unload', () => {
     $('body').toggleClass('begin')
     $('body').css('opacity', 1)
 })
