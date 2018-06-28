@@ -6,6 +6,8 @@ $('body .container ul .item').click((e) => {
 })
 
 $(window).on('unload', () => {
-    $('body').toggleClass('begin')
-    $('body').css('opacity', 1)
+    setTimeout(() => {
+        $('body').toggleClass('begin')
+        $('body').css('opacity', 1)
+    }, 500)
 })
