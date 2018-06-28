@@ -1,15 +1,6 @@
 @font-face {
-    font-family: Decterm;
-    src: url("../fonts/_decterm.ttf");
-}
-
-@-webkit-keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    font-family: Josefin_sans;
+    src: url('../fonts/JosefinSans-Regular.ttf');
 }
 
 :root {
@@ -30,7 +21,7 @@ html, body {
 
     background: var(--bg-color) fixed;
 
-    font-family: Decterm;
+    font-family: Josefin_sans;
     color: #EFEFEF;
 }
 
@@ -38,7 +29,10 @@ body {
     opacity: 0;
     animation: fadeIn 1s;
     -webkit-animation: fadeIn 1s;
+    -moz-animation: fadeIn 1s;
+    -o-animation: fadeIn 1s;
     -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
 
@@ -69,20 +63,30 @@ body .container .title {
 
 body .container .subtitle {
     font-size: 20px;
+    margin-left: 10px;
 }
 
 body .container ul {
-    line-height: 1.1;
+    line-height: 0.95;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
 body .container ul .item {
-    font-size: 50px;
-    color: #aaaaaa;
+    font-size: 60px;
+    color: #999999;
+    width: auto;
+    transition: color 0.6s;
+    -webkit-transition: color 0.6s;
+    -moz-transition: color 0.6s;
+    -o-transition: color 0.6s;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 }
 
 body .container ul .item:hover {
-    color: rgb(255, 224, 85);
+    color: #6f85ff;
+    cursor: pointer;
 }
