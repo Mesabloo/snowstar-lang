@@ -1,0 +1,9 @@
+body .container .description {
+    margin-right: 10%;
+    margin-left: 5%;
+    font-size: 28px;
+}
+
+body .container .description .section {
+    text-decoration: underline;
+}

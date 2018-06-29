@@ -14,6 +14,10 @@ body .container {
     font-size: 60px;
 }
 
+body .container .title {
+    font-weight: bold;
+}
+
 body .container .subtitle {
     font-size: 20px;
     margin-left: 10px;
