@@ -13,7 +13,7 @@ body .container .description {
 }
 
 body .container .description .section {
-    text-decoration: underline;
+    font-weight: bold;
     margin-left: 8%;
     font-size: 28px;
     line-height: 1.2;
@@ -32,4 +32,8 @@ body .container .description .sep {
 
 body .container .description .sep:hover {
     border-color: #6f85ff;
+}
+
+body .container .description .sep .title {
+    font-weight: bolder;
 }
