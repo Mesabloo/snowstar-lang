@@ -1,9 +1,35 @@
+body {
+    user-select: text;
+    -moz-user-select: text;
+    -o-user-select: text;
+    -webkit-user-select: text;
+}
+
 body .container .description {
     margin-right: 10%;
     margin-left: 5%;
-    font-size: 28px;
+    font-size: 25px;
+    white-space: pre-line;
 }
 
 body .container .description .section {
     text-decoration: underline;
+    margin-left: 8%;
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+body .container .description .sep {
+    display: inline-block;
+    border-left: 2px solid #EFEFEF;
+    margin: 0px 0px 0px 15px;
+    padding: 0px 15px 0px 15px;
+    transition: border-color 0.75s;
+    width: 40%;
+    height: auto;
+    vertical-align: text-top;
+}
+
+body .container .description .sep:hover {
+    border-color: #6f85ff;
 }

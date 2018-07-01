@@ -16,11 +16,19 @@ body .container {
 
 body .container .title {
     font-weight: bold;
+    user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -webkit-user-select: none;
 }
 
 body .container .subtitle {
     font-size: 20px;
     margin-left: 10px;
+    user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -webkit-user-select: none;
 }
 
 body .container .spacer {

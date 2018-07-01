@@ -45,3 +45,29 @@ body, .begin {
     -o-animation-fill-mode: forwards;
     animation-fill-mode: forwards; */
 }
+
+a-link, base-link {
+    color: inherit;
+    font-style: italic;
+    transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -o-transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+    cursor: pointer;
+}
+
+a-link {
+    text-decoration: underline;
+}
+
+base-link {
+    font-weight: bold;
+}
+
+a-link:hover, base-link:hover {
+    color: #6f85ff;
+}
+
+a-link:active, base-link:active {
+    color: #cc4848;
+}

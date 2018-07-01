@@ -26,3 +26,7 @@ body .container ul .item:hover {
     color: #6f85ff;
     cursor: pointer;
 }
+
+body .container ul .item:active {
+    color: #cc4848;
+}
