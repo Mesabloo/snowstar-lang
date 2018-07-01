@@ -46,17 +46,19 @@ body, .begin {
     animation-fill-mode: forwards; */
 }
 
-a-link, base-link {
-    color: inherit;
+web-link, base-link {
+    color: #999999;
     font-style: italic;
-    transition: color 0.5s;
-    -moz-transition: color 0.5s;
-    -o-transition: color 0.5s;
-    -webkit-transition: color 0.5s;
+    transition: color 0.6s;
+    -moz-transition: color 0.6s;
+    -o-transition: color 0.6s;
+    -webkit-transition: color 0.6s;
     cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    outline: none;
 }
 
-a-link {
+web-link {
     text-decoration: underline;
 }
 
@@ -64,10 +66,39 @@ base-link {
     font-weight: bold;
 }
 
-a-link:hover, base-link:hover {
+web-link:hover, base-link:hover {
     color: #6f85ff;
 }
 
-a-link:active, base-link:active {
+web-link:active, base-link:active {
     color: #cc4848;
+}
+
+web-link .info, base-link .info {
+    display: inline-block;
+    visibility: hidden;
+    width: auto;
+    background-color: #111111;
+    color: #EFEFEF;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.25s;
+    -moz-transition: opacity 0.25s;
+    -o-transition: opacity 0.25s;
+    -webkit-transition: opacity 0.25s;
+    font-size: 13px;
+    font-style: normal;
+    font-family: monospace;
+    text-decoration: underline;
+}
+
+web-link:hover .info, base-link:hover .info {
+    visibility: visible;
+    content: a-link attr(href);
+    opacity: 1;
 }

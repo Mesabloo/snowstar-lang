@@ -5,7 +5,11 @@ $(window).on('unload', e => {
     }, 500)
 })
 
-$('a-link, base-link').click(e => {
+$('web-link:not(".info")').click(e => {
+    window.location.href = `${e.target.attributes.href.value}`
+})
+
+$(' base-link:not(".info")').click(e => {
     $('body').toggleClass('end')
     setTimeout(() => {
         window.location.href = `${e.target.attributes.href.value}`
