@@ -9,3 +9,7 @@ body .container ul .item {
     font-weight: bolder;
     font-style: normal;
 }
+
+base-link {
+    text-decoration: none;
+}

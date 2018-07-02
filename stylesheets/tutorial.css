@@ -1,0 +1,62 @@
+body .container .content {
+    font-size: 25px;
+}
+
+body .container .content .section {
+    white-space: pre-line;
+}
+
+body .container .content .section .title {
+    font-weight: bold;
+    font-size: 27px;
+}
+
+body .container .content .divider {
+    height: 1px;
+    width: 70%;
+    left: 15%;
+    background-color: #EFEFEF;
+    position: relative;
+    opacity: 0.5;
+}
+
+body .container .content .section .codeblock {
+    padding: 13px;
+    font-style: inherit monospace;
+    border-left: 2px solid #EFEFEF;
+    border-radius: 5px;
+    color: inherit;
+    font-weight: bolder;
+    margin-right: 10%;
+    font-size: 22px;
+}
+
+body .container .content .section .inline-codeblock {
+    padding: 5px;
+    font-weight: bolder;
+    color: inherit;
+    border-radius: 3px;
+    background-color: #1c1e24;
+    display: inline-block;
+    font-size: 24px;
+}
+
+number {
+    color: #947ebe;
+}
+
+string {
+    color: #7ea1be;
+}
+
+keyword {
+    color: #0077ff;
+}
+
+register {
+    color: #9616ff;
+}
+
+inline-comment, multiline-comment {
+    color: #099494;
+}

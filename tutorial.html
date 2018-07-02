@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="stylesheets/common.css" />
         <link rel="stylesheet" href="stylesheets/common_title.css" />
         <link rel="stylesheet" href="stylesheets/animation.css" />
+        <link rel="stylesheet" href="stylesheets/tutorial.css" />
     </head>
 
     <body class="begin">
@@ -15,9 +16,69 @@
                 <b>Snow*</b>
             </div>
             <div class="subtitle">
-                <base-link href="index.html">/</base-link> » Overview of the language functionment
+                <base-link href="index.html">/<span class="info">https://mesabloo.github.io/snowstar-lang/index.html</span></base-link> » Overview of the language functionment
             </div>
             <div class="spacer"></div>
+            <div class="content">
+                <div class="section">
+                    <div class="title">> Working with registers:</div>
+                    There are 5 registers in Snow*: <span class="inline-codeblock"><register>nr</register> <register>dr</register> <register>tr</register> <register>pr</register> <register>cr</register></span>.
+                    Each one has a specific purpose:
+                    &emsp;<span class="inline-codeblock"><register>nr</register></span> stands for <span class="inline-codeblock"><string>Null Register</string></span>. It is empty and must remain empty during the whole program runtime. It may be used to check the size of a registry (comparing to sizes for example with <span class="inline-codeblock"><keyword>len</keyword></span>).
+                    &emsp;<span class="inline-codeblock"><register>dr</register></span> stands for <span class="inline-codeblock"><string>Data Register</string></span>. It contains persistent value storage, to emulate variables using addresses. It may be used to store something until the end of the program.
+                    &emsp;<span class="inline-codeblock"><register>tr</register></span> stands for <span class="inline-codeblock"><string>Temporary Register</string></span>. It can contain only one value marked as temporary. This register is used as a return register in many instructions.
+                    &emsp;<span class="inline-codeblock"><register>pr</register></span> stands for <span class="inline-codeblock"><string>Parameters Register</string></span>. It is used by some instruction (<span class="inline-codeblock"><keyword>sys</keyword></span> for instance). All values must be pushed in reverse order in it.
+                    &emsp;<span class="inline-codeblock"><register>cr</register></span> stands for <span class="inline-codeblock"><string>Conditional Register</string></span>. It is used when using the instruction <span class="inline-codeblock"><keyword>cmp</keyword></span> but it can also be used as a basic register.
+
+                    Some of these registers are called <span class="inline-codeblock"><string>Stack registers</string></span> (<span class="inline-codeblock"><register>tr</register> <register>pr</register> <register>cr</register></span>).
+                    If you don't know what is a stack, please read <web-link href="https://en.wikipedia.org/wiki/Stack_(abstract_data_type)">this<span class="info">https://en.wikipedia.org/wiki/Stack_(abstract_data_type)</span></web-link>.
+
+                    There are 3 ways of adding data inside those registers.
+                    &emsp;For <span class="inline-codeblock"><register>pr</register> <register>cr</register></span>, you have to use <span class="inline-codeblock"><keyword>push</keyword></span>. (<base-link href="reference.html#push">Link to push<span class="info">https://mesabloo.github.io/snowstar-lang/reference.html#push</span></base-link>)
+                    &emsp;For <span class="inline-codeblock"><register>dr</register></span>, you have to use <span class="inline-codeblock"><keyword>put</keyword></span>. (<base-link href="reference.html#put">Link to put<span class="info">https://mesabloo.github.io/snowstar-lang/reference.html#put</span></base-link>)
+                    &emsp;For <span class="inline-codeblock"><register>tr</register></span>, you have to use <span class="inline-codeblock"><keyword>new</keyword></span>. (<base-link href="reference.html#new">Link to new<span class="info">https://mesabloo.github.io/snowstar-lang/reference.html#new</span></base-link>)
+
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="section">
+                    <div class="title">> The basic syntax:</div>
+                    Snow* is written under a static syntax. Each line of code follows the same rules:
+                    <div class="codeblock"><keyword>instruction</keyword> [arg0, arg1...] [<inline-comment>% comment</inline-comment>]
+                        &emsp;><span class="inline-codeblock">[]</span> stands for <span class="inline-codeblock">unrequired instruction argument</span>.
+
+                        <multiline-comment>#* It is possible to put a multiline comment wherever in a line, as long as it is properly closed. *#</multiline-comment>
+                    </div>
+                    Not following this syntax will result in compilation problems !
+
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="section">
+                    <div clas="title">></div>
+                </div>
+
+            <!--    <div class="section">
+                    <div class="title">> Quick maths:</div>
+                    <div class="codeblock"><keyword>add</keyword> <number>1i</number>, <number>1i</number>
+                        <inline-comment>% Equivalent to: tr = 1 + 1;</inline-comment>
+                        <inline-comment>% This also works with strings.</inline-comment>
+                    </div>
+                    <div class="codeblock"><keyword>sub</keyword> <number>2i</number>, <number>1i</number>
+                        <inline-comment>% Equivalent to: tr = 2 - 1;</inline-comment>
+                        <inline-comment>% Working with negative numbers will result in a interruption of the VM.</inline-comment>
+                    </div>
+                    <div class="codeblock"><keyword>mul</keyword> <number>3i</number>, <number>1i</number>
+                        <inline-comment>% Equivalent to: tr = 3 * 1;</inline-comment>
+                    </div>
+                    <div class="codeblock"><keyword>div</keyword> <number>1i</number>, <number>1i</number>
+                        <inline-comment>% Equivalent to: tr = int(1 / 1);</inline-comment>
+                        <inline-comment>% Dividing by 0 is strictly forbidden.</inline-comment>
+                    </div>
+                </div> -->
+            </div>
         </div>
     </body>
 

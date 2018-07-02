@@ -9,7 +9,7 @@ $('web-link:not(".info")').click(e => {
     window.location.href = `${e.target.attributes.href.value}`
 })
 
-$(' base-link:not(".info")').click(e => {
+$('base-link:not(".info")').click(e => {
     $('body').toggleClass('end')
     setTimeout(() => {
         window.location.href = `${e.target.attributes.href.value}`
