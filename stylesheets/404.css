@@ -1,0 +1,7 @@
+body .container .content {
+    margin-right: 10%;
+    text-align: center;
+    text-justify: center;
+    font-size: 35px;
+    white-space: pre-line;
+}
