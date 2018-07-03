@@ -1,5 +1,6 @@
 body .container .content {
     font-size: 25px;
+    line-height: 1.2;
 }
 
 body .container .content .section {
@@ -39,7 +40,6 @@ body .container .content .section .inline-codeblock {
     background-color: #1c1e24;
     display: inline-block;
     font-size: 23px;
-    line-height: 1.2;
 }
 
 number {
