@@ -57,8 +57,42 @@
                 <div class="divider"></div>
 
                 <div class="section">
-                    <div clas="title">></div>
+                    <div class="title">> Maths Basics:</div>
+                    There are 4 mathematical operations in Snow*: <span class="inline-codeblock"><keyword>add</keyword> <keyword>sub</keyword> <keyword>mul</keyword> <keyword>div</keyword></span>
+                    Both of these instructions take two arguments: either register or numbers (or also strings for <span class="inline-codeblock"><keyword>add</keyword></span>).
+                    The first argument given is the first value in the operation.
+
+                    For example, <div class="codeblock"><keyword>sub</keyword> <number>01110x</number>, <number>07h</number>
+                        <inline-comment>% This is the equivalent of 14 - 7, not 7 - 14</inline-comment>
+                    </div>
+                    Results of these operations are pushed into <span class="inline-codeblock"><register>tr</register></span>, so make sure it is empty before calling one of these instructions. (otherwise it will get ignored as <span class="inline-codeblock"><register>tr</register></span> cannot contain multiple values.)
+
                 </div>
+
+                <div class="divider"></div>
+
+                <div class="section">
+                    <div class="title">> System calls:</div>
+                    You can make system calls in Snow* thanks to <span class="inline-codeblock"><keyword>sys</keyword></span>. It only takes one argument as a number describing what you would like to perform on the system.
+                    Available arguments are:<ul><li>Code <span class="inline-codeblock"><number>1</number></span> is also called "Standard Output" in Snow*. It takes the fields in <span class="inline-codeblock"><register>pr</register></span> and outputs them in a reversed order.</li><li>Code <span class="inline-codeblock"><number>2</number></span> is the "Standard Input". It takes what you input and puts it in <span class="inline-codeblock"><register>tr</register></span>.</li></ul>
+                    More codes may be added in the future, for example the Code <span class="inline-codeblock"><number>3</number></span>.
+
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="section">
+                    <div class="title">> Number and Strings:</div>
+                    What is a number in Snow* ? A number is a logical sequence of figures, ended by a prefix, either <span class="inline-codeblock"><number>x</number></span>, <span class="inline-codeblock"><number>o</number></span>, <span class="inline-codeblock"><number>h</number></span> or <span class="inline-codeblock"><number>i</number></span>.
+                    <span class="inline-codeblock"><number>x</number></span> is the binary prefix, <span class="inline-codeblock"><number>o</number></span> is the octal prefix, <span class="inline-codeblock"><number>h</number></span> is the hexadecimal prefix and <span class="inline-codeblock"><number>i</number></span> is the decimal prefix.
+                    &emsp;<span class="note">Note:</span> Snow* does not support real and negative numbers for now, only positive integers.
+
+                    And what is a string ? Well a string is a sequence of characters (can be numbers also) surrounded by the character <span class="inline-codeblock"><string>'</string></span>. You can however escape it (<span class="inline-codeblock"><string>\'</string></span>) to include it inside a string.
+                    A string can contain any character. The only escaped character existing for now is <span class="inline-codeblock"><string>\'</string></span> but some will be added like <span class="inline-codeblock"><string>\n</string></span>.
+
+                </div>
+
+                <div class="divider"></div>
 
             <!--    <div class="section">
                     <div class="title">> Quick maths:</div>

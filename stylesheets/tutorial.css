@@ -60,3 +60,7 @@ register {
 inline-comment, multiline-comment {
     color: #099494;
 }
+
+body .container .content .section .note {
+    font-weight: bolder;
+}
