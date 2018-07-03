@@ -24,7 +24,7 @@
                     <div class="title">> Working with registers:</div>
                     There are 5 registers in Snow*: <span class="inline-codeblock"><register>nr</register> <register>dr</register> <register>tr</register> <register>pr</register> <register>cr</register></span>.
                     Each one has a specific purpose:
-                    &emsp;<span class="inline-codeblock"><register>nr</register></span> stands for <span class="inline-codeblock"><string>Null Register</string></span>. It is empty and must remain empty during the whole program runtime. It may be used to check the size of a registry (comparing to sizes for example with <span class="inline-codeblock"><keyword>len</keyword></span>).
+                    &emsp;<span class="inline-codeblock"><register>nr</register></span> stands for <span class="inline-codeblock"><string>Null Register</string></span>. It is empty and must remain empty during the whole program runtime. It may be used to check the size of a register (comparing sizes for example with <span class="inline-codeblock"><keyword>len</keyword></span>).
                     &emsp;<span class="inline-codeblock"><register>dr</register></span> stands for <span class="inline-codeblock"><string>Data Register</string></span>. It contains persistent value storage, to emulate variables using addresses. It may be used to store something until the end of the program.
                     &emsp;<span class="inline-codeblock"><register>tr</register></span> stands for <span class="inline-codeblock"><string>Temporary Register</string></span>. It can contain only one value marked as temporary. This register is used as a return register in many instructions.
                     &emsp;<span class="inline-codeblock"><register>pr</register></span> stands for <span class="inline-codeblock"><string>Parameters Register</string></span>. It is used by some instruction (<span class="inline-codeblock"><keyword>sys</keyword></span> for instance). All values must be pushed in reverse order in it.
@@ -59,7 +59,7 @@
                 <div class="section">
                     <div class="title">> Maths Basics:</div>
                     There are 4 mathematical operations in Snow*: <span class="inline-codeblock"><keyword>add</keyword> <keyword>sub</keyword> <keyword>mul</keyword> <keyword>div</keyword></span>
-                    Both of these instructions take two arguments: either register or numbers (or also strings for <span class="inline-codeblock"><keyword>add</keyword></span>).
+                    Both of these instructions take two arguments: either registers or numbers (or also strings for <span class="inline-codeblock"><keyword>add</keyword></span>).
                     The first argument given is the first value in the operation.
 
                     For example, <div class="codeblock"><keyword>sub</keyword> <number>01110x</number>, <number>07h</number>
@@ -75,7 +75,7 @@
                     <div class="title">> System calls:</div>
                     You can make system calls in Snow* thanks to <span class="inline-codeblock"><keyword>sys</keyword></span>. It only takes one argument as a number describing what you would like to perform on the system.
                     Available arguments are:<ul><li>Code <span class="inline-codeblock"><number>1</number></span> is also called "Standard Output" in Snow*. It takes the fields in <span class="inline-codeblock"><register>pr</register></span> and outputs them in a reversed order.</li><li>Code <span class="inline-codeblock"><number>2</number></span> is the "Standard Input". It takes what you input and puts it in <span class="inline-codeblock"><register>tr</register></span>.</li></ul>
-                    More codes may be added in the future, for example the Code <span class="inline-codeblock"><number>3</number></span>.
+                    More codes may be added in the future, for example the Code <span class="inline-codeblock"><number>3</number></span>. (<base-link>Link to sys</base-link>)
 
                 </div>
 
