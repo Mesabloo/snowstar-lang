@@ -86,6 +86,7 @@ web-link .info, base-link .info {
     font-family: monospace;
     text-decoration: underline;
     font-weight: normal;
+    pointer-events: none;
 }
 
 web-link:hover .info, base-link:hover .info {
