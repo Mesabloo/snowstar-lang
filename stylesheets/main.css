@@ -1,5 +1,8 @@
-body .container ul {
+body .container {
     line-height: 1.1;
+}
+
+body .container ul {
     list-style: none;
     padding: 0;
     margin: 0;
