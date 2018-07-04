@@ -91,6 +91,5 @@ web-link .info, base-link .info {
 
 web-link:hover .info, base-link:hover .info {
     visibility: visible;
-    content: a-link attr(href);
     opacity: 1;
 }
