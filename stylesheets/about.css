@@ -37,3 +37,23 @@ body .container .description .sep:hover {
 body .container .description .sep .title {
     font-weight: bolder;
 }
+
+@media only screen and (max-width: 650px) {
+    body .container .description {
+        font-size: 13px;
+    }
+    body .container .description .section {
+        font-size: 14px;
+    }
+    body .container .description .inliner::after {
+        content: '\A\A';
+    }
+}
+@media only screen and (min-width: 650px) and (max-width: 900px) {
+    body .container .description {
+        font-size: 19px;
+    }
+    body .container .description .section {
+        font-size: 21px;
+    }
+}

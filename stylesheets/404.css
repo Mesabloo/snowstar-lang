@@ -5,3 +5,14 @@ body .container .content {
     font-size: 35px;
     white-space: pre-line;
 }
+
+@media only screen and (max-width: 400px) {
+    body .container .content {
+        font-size: 17px;
+    }
+}
+@media only screen and (min-width: 400px) and (max-width: 900px) {
+    body .container .content {
+        font-size: 26px;
+    }
+}

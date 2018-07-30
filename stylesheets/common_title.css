@@ -36,3 +36,20 @@ body .container .spacer {
     height: 50px;
     background-color: transparent;
 }
+
+@media only screen and (max-width: 600px) {
+    body .container {
+        font-size: 30px;
+    }
+    body .container .subtitle {
+        font-size: 10px;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    body .container {
+        font-size: 45px;
+    }
+    body .container .subtitle {
+        font-size: 15px;
+    }
+}
