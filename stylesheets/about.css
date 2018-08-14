@@ -38,6 +38,16 @@ body .container .description .sep .title {
     font-weight: bolder;
 }
 
+body .container .description .inline-codeblock {
+    padding: 5px;
+    font-weight: bolder;
+    color: inherit;
+    border-radius: 4px;
+    background-color: #1c1e24;
+    display: inline-block;
+    font-size: 23px;
+}
+
 @media only screen and (max-width: 650px) {
     body .container .description {
         font-size: 13px;
@@ -48,6 +58,9 @@ body .container .description .sep .title {
     body .container .description .inliner::after {
         content: '\A\A';
     }
+    body .container .description .inline-codeblock {
+        font-size: 11px;
+    }
 }
 @media only screen and (min-width: 650px) and (max-width: 900px) {
     body .container .description {
@@ -55,5 +68,8 @@ body .container .description .sep .title {
     }
     body .container .description .section {
         font-size: 21px;
+    }
+    body .container .description .inline-codeblock {
+        font-size: 17px;
     }
 }
