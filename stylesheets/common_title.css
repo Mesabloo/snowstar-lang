@@ -12,6 +12,10 @@ body .spacer_left {
 body .container {
     line-height: 0.9;
     font-size: 60px;
+    transition: font-size 0.5s;
+    -webkit-transition: font-size 0.5s;
+    -o-transition: font-size 0.5s;
+    -moz-transition: font-size 0.5s;
 }
 
 body .container .title {
@@ -29,6 +33,10 @@ body .container .subtitle {
     -moz-user-select: none;
     -o-user-select: none;
     -webkit-user-select: none;
+    transition: font-size 0.5s;
+    -webkit-transition: font-size 0.5s;
+    -o-transition: font-size 0.5s;
+    -moz-transition: font-size 0.5s;
 }
 
 body .container .spacer {
